@@ -207,7 +207,9 @@
     </Page>
     <Compile Include="Analyzers\CodeFix.cs" />
     <Compile Include="Analyzers\GU0072AllTypesShouldBeInternal.cs" />
+    <Compile Include="Analyzers\GU0073AllUsagesOfIntegralTypeParameterConstraintShouldBeIntegral.cs" />
     <Compile Include="Analyzers\HappyPath.cs" />
+    <Compile Include="Analyzers\MakeIntegralTypeConstraintFixProvider.cs" />
     <Compile Include="Analyzers\MakeInternalFixProvider.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>

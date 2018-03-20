@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
+using Gu.Roslyn.Asserts;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
@@ -53,3 +52,22 @@ using System.Windows;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: MetadataReference(typeof(object), new[] { "global", "mscorlib" })]
+[assembly: MetadataReference(typeof(System.Diagnostics.Debug), new[] { "global", "System" })]
+[assembly: TransitiveMetadataReferences(typeof(Microsoft.CodeAnalysis.CSharp.CSharpCompilation))]
+//[assembly: TransitiveMetadataReferences(typeof(System.Reactive.Concurrency.DispatcherScheduler))]
+[assembly: MetadataReferences(
+  typeof(System.Linq.Enumerable),
+  typeof(System.Net.WebClient),
+  //typeof(System.Drawing.Bitmap),
+  typeof(System.Data.Common.DbConnection),
+  typeof(System.Xml.Serialization.XmlSerializer),
+  //typeof(System.Runtime.Serialization.DataContractSerializer),
+  typeof(System.Windows.Media.Brush),
+  typeof(System.Windows.Controls.Control),
+  typeof(System.Windows.Media.Matrix),
+  typeof(System.Xaml.XamlLanguage),
+  typeof(System.Collections.Immutable.ImmutableArray),
+  typeof(NUnit.Framework.Assert))]//,
+  //typeof(Moq.Mock))]
